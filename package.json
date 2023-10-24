@@ -1,0 +1,41 @@
+{
+  "name": "wajik-gulir",
+  "version": "1.0.0",
+  "description": "Library sederhana animasi ketika di scroll",
+  "files": [
+    "dist",
+    "types",
+    "LICENSE",
+    "README.md"
+  ],
+  "main": "./dist/wajik-gulir.js",
+  "types": "./types/wajik-gulir.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "scroll",
+    "animation",
+    "front-end",
+    "wajik-gulir",
+    "gulir",
+    "transition",
+    "javascript",
+    "typescript"
+  ],
+  "author": {
+    "name": "wajik45",
+    "email": "haikal2589780@gmail.com"
+  },
+  "repository": {
+    "url": "https://github.com/wajik45/wajik-gulir.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.8.8",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0"
+  }
+}
