@@ -11,16 +11,15 @@ import isView from "./functions/isView";
 import isAsync from "./functions/isAsync";
 import isWajik from "./functions/isWajik";
 import setAnimation from "./functions/setAnimation";
+import ready from "./functions/ready";
 
 const wajikGulir: IWajikGulir = {
   cus(initialValue?: IInitialValue) {
     const main: IMain = {
       async: {
-        elements: document.querySelectorAll("[wajik-async]"),
-
         init() {
-          if (this.elements.length > 0) {
-            for (const element of this.elements) {
+          ready("[wajik-async]", (elements) => {
+            for (const element of elements) {
               const children = [...element.children] as HTMLElement[];
 
               if (children.length > 0) {
@@ -31,12 +30,12 @@ const wajikGulir: IWajikGulir = {
                 }
               }
             }
-          }
+          });
         },
 
         start() {
-          if (this.elements.length > 0) {
-            for (const element of this.elements) {
+          ready("[wajik-async]", (elements) => {
+            for (const element of elements) {
               const children = [...element.children] as HTMLElement[];
 
               const view = getView(element, defaultValue, initialValue);
@@ -88,24 +87,22 @@ const wajikGulir: IWajikGulir = {
                 }
               }
             }
-          }
+          });
         },
       },
 
       basic: {
-        elements: document.querySelectorAll("[wajik]"),
-
         init() {
-          if (this.elements.length > 0) {
-            for (const element of this.elements) {
+          ready("[wajik]", (elements) => {
+            for (const element of elements) {
               if (!isAsync(element)) setAnimation(element, "hide");
             }
-          }
+          });
         },
 
         start() {
-          if (this.elements.length > 0) {
-            for (const element of this.elements) {
+          ready("[wajik]", (elements) => {
+            for (const element of elements) {
               if (!isAsync(element)) {
                 const delay = getDelay(element, defaultValue, initialValue);
                 const duration = getDuration(
@@ -133,22 +130,32 @@ const wajikGulir: IWajikGulir = {
                 }
               }
             }
-          }
+          });
         },
       },
     };
 
-    main.async.init();
-    main.basic.init();
+    function init() {
+      main.async.init();
+      main.basic.init();
+    }
 
-    main.async.start();
-    main.basic.start();
-
-    document.addEventListener("scroll", function () {
+    function start() {
       main.async.start();
       main.basic.start();
+    }
+
+    init();
+    start();
+
+    document.addEventListener("scroll", function () {
+      start();
     });
   },
 };
 
+// DEV
+// wajikGulir.cus();
+
+// PROD
 export default wajikGulir;

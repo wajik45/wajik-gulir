@@ -52,6 +52,11 @@ body {
   flex-direction: column;
 }
 
+#basic,
+#async {
+  overflow-x: hidden;
+}
+
 #basic {
   display: flex;
   flex-direction: column;

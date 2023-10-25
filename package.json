@@ -8,8 +8,15 @@
     "LICENSE",
     "README.md"
   ],
-  "main": "./dist/wajik-gulir.js",
-  "types": "./types/wajik-gulir.d.ts",
+  "main": "./dist/wajik-gulir.umd.js",
+  "module": "./dist/wajik-gulir.es.js",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/wajik-gulir.es.js",
+      "require": "./dist/wajik-gulir.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",

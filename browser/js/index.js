@@ -181,7 +181,7 @@ _async.innerHTML += `
         <p>Contoh:</p>
         <p>Element pembungkus: <span class="value-light">wajik-async wajik-view="top" wajik="swipe-right" wajik-await="200"</span></p>
         <p>Element: <span class="value-light">tanpa atribut</span></p>
-        <p class="comment">khusus untuk view di async nilai harus sejajar dengan element pembungkus</p>
+        <p class="comment">Untuk view nilai harus sejajar dengan atribut wajik-async</p>
     </div>
 `;
 
