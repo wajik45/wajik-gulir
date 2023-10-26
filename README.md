@@ -213,3 +213,25 @@ Sumbu dan (-) diisi otomatis
 - -tr() = transform: translate()
 - -sc() = transform: scale()
 - -rt() = transform: rotate()
+
+## Tips
+
+Selalu perhatikan dimensi dari element karna lumayan berpengaruh
+Contoh:
+
+```html
+<style>
+  h1 {
+    border: 1px solid red;
+  }
+
+  .oke {
+    width: max-content;
+  }
+</style>
+
+<h1 data-wajik="flip-x">Tes 123</h1>
+
+<!-- SIP -->
+<h1 class="oke" data-wajik="flip-x">Tes 123</h1>
+```

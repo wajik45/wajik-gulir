@@ -2,6 +2,10 @@ import getCssUnit from "./getCssUnit";
 import getAnimations from "./getAnimations";
 
 export default function setAnimation(element: HTMLElement, type: string) {
+  if (getComputedStyle(element).display === "inline") {
+    element.style.display = "inline-block";
+  }
+
   const animationName =
     element.dataset.wajik || element.parentElement?.dataset.wajik;
 
