@@ -1,4 +1,4 @@
-interface IInitailValue {
+interface InitialValue {
   delay?: number;
   duration?: number;
   await?: number;
@@ -7,10 +7,10 @@ interface IInitailValue {
   oneAction?: boolean;
 }
 
-interface IWajikGulir {
-  cus(options: IInitailValue): void;
+interface WajikGulir {
+  cus(options: InitialValue): void;
 }
 
-declare const wajikGulir: IWajikGulir;
+declare const wajikGulir: WajikGulir;
 
 export = wajikGulir;

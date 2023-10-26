@@ -6,6 +6,8 @@ Library sederhana animasi ketika di scroll
 
 ### CDN
 
+Wajib taro di head
+
 ```html
 <script src="https://unpkg.com/wajik-gulir@1.0.1/dist/wajik-gulir.js"></script>
 ```
