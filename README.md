@@ -9,7 +9,7 @@ Library sederhana animasi ketika di scroll
 Wajib taro di head
 
 ```html
-<script src="https://unpkg.com/wajik-gulir@1.0.1/dist/wajik-gulir.js"></script>
+<script src="https://unpkg.com/wajik-gulir@1.0.2/dist/wajik-gulir.js"></script>
 ```
 
 ### Package manager
@@ -29,7 +29,7 @@ npm install wajik-gulir
     <title>Wajik Gulir</title>
 
     <!-- CDN -->
-    <script src="https://unpkg.com/wajik-gulir@1.0.1/dist/wajik-gulir.js"></script>
+    <script src="https://unpkg.com/wajik-gulir@1.0.2/dist/wajik-gulir.js"></script>
 
     <!-- INISIALISASI -->
     <script>
