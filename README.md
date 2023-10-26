@@ -66,9 +66,9 @@ export default App;
 // Jika ingin mengubah nilai bawaan saat inisialisasi maka tambahkan argument berupa object seperti ini
 wajikGulir.cus({
   delay?: number, // milidetik
-  duration?: 700, // milidetik
-  await?: 0, // milidetik
-  timingFunction?: 'ease', // timing function css
+  duration?: number, // milidetik
+  await?: number, // milidetik
+  timingFunction?: string, // timing function css
   view?: 'top' | 'middle' | 'bottom',
   oneAction?: boolean
 });
@@ -157,7 +157,7 @@ Sebagai grup
 </div>
 ```
 
-Atribut view harus sejajar dengan atribut wajik-async
+Atribut view harus sejajar dengan atribut data-wajik-async
 
 ```html
 <div
