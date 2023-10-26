@@ -186,24 +186,26 @@ Atribut view harus sejajar dengan atribut data-wajik-async
 
 ## Animasi-animasi
 
-| Name           | Units         |
-| -------------- | ------------- |
-| swipe-right    | -tr()         |
-| swipe-left     | -tr()         |
-| swipe-up       | -tr()         |
-| swipe-down     | -tr()         |
-| zoom-in        | -sc()         |
-| zoom-in-right  | -sc() / -tr() |
-| zoom-in-left   | -sc() / -tr() |
-| zoom-in-up     | -sc() / -tr() |
-| zoom-in-down   | -sc() / -tr() |
-| zoom-out       | -sc()         |
-| zoom-out-right | -sc() / -tr() |
-| zoom-out-left  | -sc() / -tr() |
-| zoom-out-up    | -sc() / -tr() |
-| zoom-out-down  | -sc() / -tr() |
-| flip-x         | -rt()         |
-| flip-y         | -rt()         |
+Sumbu dan (-) diisi otomatis
+
+| Name           | Units         | Nilai awal bawaan |
+| -------------- | ------------- | ----------------- |
+| swipe-right    | -tr()         | -tr(50%)          |
+| swipe-left     | -tr()         | -tr(50%)          |
+| swipe-up       | -tr()         | -tr(50%)          |
+| swipe-down     | -tr()         | -tr(50%)          |
+| zoom-in        | -sc()         | -sc(50%)          |
+| zoom-in-right  | -sc() / -tr() | -sc(50%)-tr(50%)  |
+| zoom-in-left   | -sc() / -tr() | -sc(50%)-tr(50%)  |
+| zoom-in-up     | -sc() / -tr() | -sc(50%)-tr(50%)  |
+| zoom-in-down   | -sc() / -tr() | -sc(50%)-tr(50%)  |
+| zoom-out       | -sc()         | -sc(150%)         |
+| zoom-out-right | -sc() / -tr() | -sc(150%)-tr(50%) |
+| zoom-out-left  | -sc() / -tr() | -sc(150%)-tr(50%) |
+| zoom-out-up    | -sc() / -tr() | -sc(150%)-tr(50%) |
+| zoom-out-down  | -sc() / -tr() | -sc(150%)-tr(50%) |
+| flip-x         | -rt()         | -rt(180deg)       |
+| flip-y         | -rt()         | -rt(180deg)       |
 | fade-in        |               |
 
 ### Artinya apa bang mesi
