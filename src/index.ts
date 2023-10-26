@@ -156,7 +156,7 @@ const wajikGulir: IWajikGulir = {
 };
 
 // DEV
-// wajikGulir.cus();
+wajikGulir.cus();
 
-// PROD
-export default wajikGulir;
+// BUILD
+// export default wajikGulir;

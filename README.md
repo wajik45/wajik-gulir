@@ -7,7 +7,7 @@ Library sederhana animasi ketika di scroll
 ### CDN
 
 ```html
-<script src="https://unpkg.com/wajik-gulir@1.0.0/dist/wajik-gulir.umd.js"></script>
+<script src="https://unpkg.com/wajik-gulir@1.0.1/dist/wajik-gulir.js"></script>
 ```
 
 ### Package manager
@@ -21,15 +21,24 @@ npm install wajik-gulir
 ### Dasar
 
 ```html
-<body>
-  <h1 data-wajik="swipe-right">Halo</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wajik Gulir</title>
 
-  <script src="https://unpkg.com/wajik-gulir@1.0.0/dist/wajik-gulir.umd.js"></script>
-  <script>
-    // INISIALISASI
-    wajikGulir.cus();
-  </script>
-</body>
+    <!-- CDN -->
+    <script src="https://unpkg.com/wajik-gulir@1.0.1/dist/wajik-gulir.js"></script>
+
+    <!-- INISIALISASI -->
+    <script>
+      wajikGulir.cus();
+    </script>
+  </head>
+  <body>
+    <!-- GASKEN -->
+    <h1 data-wajik="swipe-right">Halo</h1>
+  </body>
+</html>
 ```
 
 ### React
