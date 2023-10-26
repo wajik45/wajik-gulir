@@ -8,7 +8,7 @@ interface InitialValue {
 }
 
 interface WajikGulir {
-  cus(options: InitialValue): void;
+  cus(options?: InitialValue): void;
 }
 
 declare const wajikGulir: WajikGulir;
