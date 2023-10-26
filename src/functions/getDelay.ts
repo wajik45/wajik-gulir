@@ -7,8 +7,8 @@ export default function getDelay(
   initialValue?: IInitialValue
 ) {
   return Number(
-    element.getAttribute("wajik-delay") ||
-      element.parentElement?.getAttribute("wajik-delay") ||
+    element.dataset.wajikDelay ||
+      element.parentElement?.dataset.wajikDelay ||
       initialValue?.delay ||
       defaultValue.delay
   );

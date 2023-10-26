@@ -7,8 +7,8 @@ export default function getDuration(
   initialValue?: IInitialValue
 ) {
   return Number(
-    element.getAttribute("wajik-duration") ||
-      element.parentElement?.getAttribute("wajik-duration") ||
+    element.dataset.wajikDuration ||
+      element.parentElement?.dataset.wajikDuration ||
       initialValue?.duration ||
       defaultValue.duration
   );

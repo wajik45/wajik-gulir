@@ -11,14 +11,14 @@ import isView from "./functions/isView";
 import isAsync from "./functions/isAsync";
 import isWajik from "./functions/isWajik";
 import setAnimation from "./functions/setAnimation";
-import ready from "./functions/ready";
+import waitForElement from "./functions/waitForElement";
 
 const wajikGulir: IWajikGulir = {
   cus(initialValue?: IInitialValue) {
     const main: IMain = {
       async: {
         init() {
-          ready("[wajik-async]", (elements) => {
+          waitForElement("[data-wajik-async]", (elements) => {
             for (const element of elements) {
               const children = [...element.children] as HTMLElement[];
 
@@ -34,7 +34,7 @@ const wajikGulir: IWajikGulir = {
         },
 
         start() {
-          ready("[wajik-async]", (elements) => {
+          waitForElement("[data-wajik-async]", (elements) => {
             for (const element of elements) {
               const children = [...element.children] as HTMLElement[];
 
@@ -51,6 +51,7 @@ const wajikGulir: IWajikGulir = {
                         defaultValue,
                         initialValue
                       );
+
                       const delay = getDelay(child, defaultValue, initialValue);
                       const duration = getDuration(
                         child,
@@ -93,7 +94,7 @@ const wajikGulir: IWajikGulir = {
 
       basic: {
         init() {
-          ready("[wajik]", (elements) => {
+          waitForElement("[data-wajik]", (elements) => {
             for (const element of elements) {
               if (!isAsync(element)) setAnimation(element, "hide");
             }
@@ -101,7 +102,7 @@ const wajikGulir: IWajikGulir = {
         },
 
         start() {
-          ready("[wajik]", (elements) => {
+          waitForElement("[data-wajik]", (elements) => {
             for (const element of elements) {
               if (!isAsync(element)) {
                 const delay = getDelay(element, defaultValue, initialValue);

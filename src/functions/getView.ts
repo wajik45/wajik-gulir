@@ -8,8 +8,8 @@ export default function getView(
   initialValue?: IInitialValue
 ) {
   return (
-    (element.getAttribute("wajik-view") as ViewType) ||
-    (element.parentElement?.getAttribute("wajik-view") as ViewType) ||
+    (element.dataset.wajikView as ViewType) ||
+    (element.parentElement?.dataset.wajikView as ViewType) ||
     initialValue?.view ||
     defaultValue.view
   );

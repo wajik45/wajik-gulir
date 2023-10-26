@@ -36,24 +36,24 @@ const basicList2 = [
 const basicList3 = [
   {
     name: "swipe-right",
-    attributes: 'wajik-delay="500"',
+    attributes: 'data-wajik-delay="500"',
   },
   {
     name: "zoom-in-sc(0%)",
-    attributes: 'wajik-duration="2000"',
+    attributes: 'data-wajik-duration="2000"',
   },
   {
     name: "swipe-left-tr(30px)",
-    attributes: 'wajik-timing-function="linear"',
+    attributes: 'data-wajik-timing-function="linear"',
   },
   {
     name: "zoom-out",
-    attributes: 'wajik-view="bottom"',
+    attributes: 'data-wajik-view="bottom"',
   },
   {
     name: "zoom-in-right-tr(200px)",
     attributes:
-      'wajik-delay="500" wajik-duration="1500" wajik-timing-function="ease-in" wajik-view="top"',
+      'data-wajik-delay="500" data-wajik-duration="1500" data-wajik-timing-function="ease-in" data-wajik-view="top"',
   },
 ];
 
@@ -64,15 +64,15 @@ basic.innerHTML += `
         <h1>Basic</h1>
         <p>Dengan menambahkan atribut di element</p>
         <p>Contoh:</p>
-        <p>Element: <span class="value-light">wajik="swipe-right"<span></p>
+        <p>Element: <span class="value-light">data-wajik="swipe-right"<span></p>
     </div>
 `;
 
 basic.innerHTML += basicList1
   .map((item) => {
     return `
-      <div class="box" wajik="${item}">
-        <p><span class="value-dark">wajik="${item}"</span></p>  
+      <div class="box" data-wajik="${item}">
+        <p><span class="value-dark">data-wajik="${item}"</span></p>  
       </div>
     `;
   })
@@ -82,7 +82,7 @@ basic.innerHTML += `
   <div class="outside">
     <h3>Memberikan unit spesifik</h3>
     <p>Contoh:</p>
-    <p>Element: <span class="value-light">wajik="swipe-right-tr(20px)"</span></p>
+    <p>Element: <span class="value-light">data-wajik="swipe-right-tr(20px)"</span></p>
     <p class="comment">
       tr adalah singkatan dari translate dengan sumbu otomatis, tidak semua animasi mempunyai unit yang sama, lebih lengkapnya <a href="/">disini</a>
     </p>
@@ -92,8 +92,8 @@ basic.innerHTML += `
 basic.innerHTML += basicList2
   .map((item) => {
     return `
-      <div class="box" wajik="${item}">
-        <p><span class="value-dark">wajik="${item}"</span></p>  
+      <div class="box" data-wajik="${item}">
+        <p><span class="value-dark">data-wajik="${item}"</span></p>  
       </div>
     `;
   })
@@ -103,15 +103,15 @@ basic.innerHTML += `
   <div class="outside">
     <h3>Memberikan nilai spesifik</h3>
     <p>Contoh:</p>
-    <p>Element: <span class="value-light">wajik="swipe-right-tr(20px)" wajik-delay="500"<span></p>
+    <p>Element: <span class="value-light">data-wajik="swipe-right-tr(20px)" data-wajik-delay="500"<span></p>
   </div>
 `;
 
 basic.innerHTML += basicList3
   .map((item) => {
     return `
-      <div class="box" wajik="${item.name}" ${item.attributes}>
-        <p><span class="value-dark">wajik="${item.name}" ${item.attributes}</span></p>  
+      <div class="box" data-wajik="${item.name}" ${item.attributes}>
+        <p><span class="value-dark">data-wajik="${item.name}" ${item.attributes}</span></p>  
       </div>
     `;
   })
@@ -131,19 +131,19 @@ _async.innerHTML += `
     <div class="outside">
         <h1>Async await</h1>
         <p>Contoh:</p>
-        <p>Element pembungkus: <span class="value-light">wajik-async</span></p>
-        <p>Element: <span class="value-light">wajik="swipe-up" wajik-await=200</span></p>
+        <p>Element pembungkus: <span class="value-light">data-wajik-async</span></p>
+        <p>Element: <span class="value-light">data-wajik="swipe-up" data-wajik-await=200</span></p>
     </div>
 `;
 
 _async.innerHTML += `
-    <div class="main" wajik-async>
+    <div class="main" data-wajik-async>
         ${_asyncList
           .map((item) => {
             return `
-                <div class="box" wajik="${item}" wajik-await="200">
-                    <p>Element pembungkus: <span class="value-dark">wajik-async<span></p>
-                    <p>Element: <span class="value-dark">wajik="${item}" wajik-await="200"</span></p>
+                <div class="box" data-wajik="${item}" data-wajik-await="200">
+                    <p>Element pembungkus: <span class="value-dark">data-wajik-async<span></p>
+                    <p>Element: <span class="value-dark">data-wajik="${item}" data-wajik-await="200"</span></p>
                 </div>
             `;
           })
@@ -155,18 +155,18 @@ _async.innerHTML += `
     <div class="outside">
         <h3>Async sebagai grup</h3>
         <p>Contoh:</p>
-        <p>Element pembungkus: <span class="value-light">wajik-async wajik="swipe-right" wajik-await="200" wajik-delay="500"</span></p>
+        <p>Element pembungkus: <span class="value-light">data-wajik-async data-wajik="swipe-right" data-wajik-await="200" data-wajik-delay="500"</span></p>
         <p>Element: <span class="value-light">tanpa atribut</span></p>
     </div>
 `;
 
 _async.innerHTML += `
-    <div class="main" wajik-async wajik="swipe-right" wajik-await="200" wajik-delay=500>
+    <div class="main" data-wajik-async data-wajik="swipe-right" data-wajik-await="200" data-wajik-delay=500>
         ${_asyncList
           .map((item) => {
             return `
                 <div class="box">
-                <p>Element pembungkus: <span class="value-dark">wajik-async wajik="swipe-right" wajik-await="200" wajik-delay=500<span></p>
+                <p>Element pembungkus: <span class="value-dark">data-wajik-async data-wajik="swipe-right" data-wajik-await="200" data-wajik-delay=500<span></p>
                 <p>Element: <span class="value-dark">tanpa atribut</span></p>
                 </div>
             `;
@@ -179,19 +179,19 @@ _async.innerHTML += `
     <div class="outside">
         <h3>View di async</h3>
         <p>Contoh:</p>
-        <p>Element pembungkus: <span class="value-light">wajik-async wajik-view="top" wajik="swipe-right" wajik-await="200"</span></p>
+        <p>Element pembungkus: <span class="value-light">data-wajik-async data-wajik-view="top" data-wajik="swipe-right" data-wajik-await="200"</span></p>
         <p>Element: <span class="value-light">tanpa atribut</span></p>
-        <p class="comment">Untuk view nilai harus sejajar dengan atribut wajik-async</p>
+        <p class="comment">Untuk view nilai harus sejajar dengan atribut data-wajik-async</p>
     </div>
 `;
 
 _async.innerHTML += `
-    <div class="main" wajik-async wajik-view="top" wajik="swipe-left" wajik-await="200">
+    <div class="main" data-wajik-async data-wajik-view="top" data-wajik="swipe-left" data-wajik-await="200">
         ${_asyncList
           .map((item) => {
             return `
                 <div class="box">
-                <p>Element pembungkus: <span class="value-dark">wajik-async wajik-view="top" wajik="swipe-left" wajik-await="200"<span></p>
+                <p>Element pembungkus: <span class="value-dark">data-wajik-async data-wajik-view="top" data-wajik="swipe-left" data-wajik-await="200"<span></p>
                 <p>Element: <span class="value-dark">tanpa atribut</span></p>
                 </div>
             `;

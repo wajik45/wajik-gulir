@@ -3,8 +3,7 @@ import getAnimations from "./getAnimations";
 
 export default function setAnimation(element: HTMLElement, type: string) {
   const animationName =
-    element.getAttribute("wajik") ||
-    element.parentElement?.getAttribute("wajik");
+    element.dataset.wajik || element.parentElement?.dataset.wajik;
 
   if (animationName) {
     const animationNameArr = animationName.split("-");

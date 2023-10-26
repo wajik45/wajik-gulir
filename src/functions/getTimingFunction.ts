@@ -7,8 +7,8 @@ export default function getTimingFunction(
   initialValue?: IInitialValue
 ) {
   return (
-    element.getAttribute("wajik-timing-function") ||
-    element.parentElement?.getAttribute("wajik-timing-function") ||
+    element.dataset.wajikTimingFunction ||
+    element.parentElement?.dataset.wajikTimingFunction ||
     initialValue?.timingFunction ||
     defaultValue.timingFunction
   );

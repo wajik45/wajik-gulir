@@ -7,8 +7,8 @@ export default function getAwait(
   initialValue?: IInitialValue
 ) {
   return Number(
-    element.getAttribute("wajik-await") ||
-      element.parentElement?.getAttribute("wajik-await") ||
+    element.dataset.wajikAwait ||
+      element.parentElement?.dataset.wajikAwait ||
       initialValue?.await ||
       defaultValue.await
   );

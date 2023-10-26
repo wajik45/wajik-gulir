@@ -7,7 +7,7 @@ Library sederhana animasi ketika di scroll
 ### CDN
 
 ```html
-<script src="https://ckck.com"></script>
+<script src="https://unpkg.com/wajik-gulir@1.0.0/dist/wajik-gulir.umd.js"></script>
 ```
 
 ### Package manager
@@ -22,9 +22,9 @@ npm install wajik-gulir
 
 ```html
 <body>
-  <h1 wajik="nama-animasi">Halo</h1>
+  <h1 data-wajik="swipe-right">Halo</h1>
 
-  <script src="https://dawdw.dwad"></script>
+  <script src="https://unpkg.com/wajik-gulir@1.0.0/dist/wajik-gulir.umd.js"></script>
   <script>
     // INISIALISASI
     wajikGulir.cus();
@@ -44,7 +44,7 @@ const App = () => {
     wajikGulir.cus();
   }, []);
 
-  return <h1 wajik="nama-animasi">Halo nama saya Udin!</h1>;
+  return <h1 data-wajik="swipe-left">Halo nama saya Udin!</h1>;
 };
 
 export default App;
@@ -80,44 +80,44 @@ wajikGulir.cus({
 
 Atribut-atribut
 
-- wajik="animasi"
-- wajik-delay="milidetik"
-- wajik-duration="milidetik"
-- wajik-timing-function="timing-function-css"
-- view="top" / "middle" / "bottom"
+- data-wajik="animasi"
+- data-wajik-delay="milidetik"
+- data-wajik-duration="milidetik"
+- data-wajik-timing-function="timing-function-css"
+- data-wajik-view="top" / "middle" / "bottom"
 
 Bawaan Pabrik
 
 ```html
-<h1 wajik="swipe-right">Helo Breh</h1>
+<h1 data-wajik="swipe-right">Helo Breh</h1>
 ```
 
 Unit Spesifik
 
 ```html
 <!-- nilai awal = transform: translateX(30px) -->
-<h1 wajik="swipe-left-tr(30px)">Helo Cuyy</h1>
+<h1 data-wajik="swipe-left-tr(30px)">Helo Cuyy</h1>
 
 <!-- nilai awal = transform: scale(30%) -->
-<h1 wajik="zoom-in-sc(30%)">Helo Cuyy</h1>
+<h1 data-wajik="zoom-in-sc(30%)">Helo Cuyy</h1>
 
 <!-- nilai awal = transform: translateY(10%) scale(40%) -->
-<h1 wajik="zoom-in-up-tr(10%)-sc(40%)">Helo Cuyy</h1>
+<h1 data-wajik="zoom-in-up-tr(10%)-sc(40%)">Helo Cuyy</h1>
 
 <!-- nilai awal = transform: rotate(50deg) -->
-<h1 wajik="flip-x-rt(50deg)">Helo Cuyy</h1>
+<h1 data-wajik="flip-x-rt(50deg)">Helo Cuyy</h1>
 ```
 
 Nilai Spesifik
 
 ```html
-<h1 wajik="swipe-up" wajik-delay="500">Hello World!</h1>
+<h1 data-wajik="swipe-up" data-wajik-delay="500">Hello World!</h1>
 <h1
-  wajik="swipe-down-tr(100%)"
-  wajik-delay="400"
-  wajik-duration="1500"
-  wajik-timing-function="linear"
-  wajik-view="bottom"
+  data-wajik="swipe-down-tr(100%)"
+  data-wajik-delay="400"
+  data-wajik-duration="1500"
+  data-wajik-timing-function="linear"
+  data-wajik-view="bottom"
 >
   Helo Cuyy
 </h1>
@@ -127,29 +127,29 @@ Nilai Spesifik
 
 Atribut-atribut
 
-- wajik-async
-- wajik-await="milidetik"
-- wajik="animasi"
-- wajik-delay="milidetik"
-- wajik-duration="milidetik"
-- wajik-timing-function="timing-function-css"
-- view="top" / "middle" / "bottom"
+- data-wajik-async
+- data-wajik-await="milidetik"
+- data-wajik="animasi"
+- data-wajik-delay="milidetik"
+- data-wajik-duration="milidetik"
+- data-wajik-timing-function="timing-function-css"
+- data-wajik-view="top" / "middle" / "bottom"
 
 Bawaan pabrik
 
 ```html
-<div wajik-async>
-  <h1 wajik="swipe-up" wajik-await="200">Hello Boyy!!</h1>
-  <h1 wajik="swipe-up" wajik-await="200">Hello Boyy!!</h1>
-  <h1 wajik="swipe-up" wajik-await="200">Hello Boyy!!</h1>
-  <h1 wajik="swipe-up" wajik-await="200">Hello Boyy!!</h1>
+<div data-wajik-async>
+  <h1 data-wajik="swipe-up" data-wajik-await="200">Hello Boyy!!</h1>
+  <h1 data-wajik="swipe-up" data-wajik-await="200">Hello Boyy!!</h1>
+  <h1 data-wajik="swipe-up" data-wajik-await="200">Hello Boyy!!</h1>
+  <h1 data-wajik="swipe-up" data-wajik-await="200">Hello Boyy!!</h1>
 </div>
 ```
 
 Sebagai grup
 
 ```html
-<div wajik-async wajik="zoom-in-up" wajik-await="200">
+<div data-wajik-async data-wajik="zoom-in-up" data-wajik-await="200">
   <h1>Hello World!!</h1>
   <h1>Hello World!!</h1>
   <h1>Hello World!!</h1>
@@ -159,12 +159,19 @@ Sebagai grup
 
 Atribut view harus sejajar dengan atribut wajik-async
 
-<div wajik-async wajik="zoom-in-up" wajik-await="200" wajik-view="top">
+```html
+<div
+  data-wajik-async
+  data-wajik="zoom-in-up"
+  data-wajik-await="200"
+  data-wajik-view="top"
+>
   <h1>Hello World!!</h1>
   <h1>Hello World!!</h1>
   <h1>Hello World!!</h1>
   <h1>Hello World!!</h1>
 </div>
+```
 
 ## Animasi-animasi
 
