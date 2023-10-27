@@ -9,7 +9,7 @@ Library sederhana animasi ketika di scroll
 Wajib taro di head
 
 ```html
-<script src="https://unpkg.com/wajik-gulir@1.0.2/dist/wajik-gulir.js"></script>
+<script src="https://unpkg.com/wajik-gulir@1.0.3/dist/wajik-gulir.js"></script>
 ```
 
 ### Package manager
@@ -29,7 +29,7 @@ npm install wajik-gulir
     <title>Wajik Gulir</title>
 
     <!-- CDN -->
-    <script src="https://unpkg.com/wajik-gulir@1.0.2/dist/wajik-gulir.js"></script>
+    <script src="https://unpkg.com/wajik-gulir@1.0.3/dist/wajik-gulir.js"></script>
 
     <!-- INISIALISASI -->
     <script>
@@ -234,4 +234,36 @@ Contoh:
 
 <!-- SIP -->
 <h1 class="oke" data-wajik="flip-x">Tes 123</h1>
+```
+
+Pastikan element tidak ada transition, jika ada maka bungkus dengan element lain
+Contoh:
+
+```html
+<style>
+  .box {
+    width: 50px;
+    height: 50px;
+    background-color: lightgreen;
+    border: 1px solid #333;
+    transition: 0.2s;
+  }
+
+  .box:hover {
+    background-color: green;
+  }
+
+  .wrapper {
+    width: max-content;
+    background-color: yellow;
+  }
+</style>
+
+<!-- Jangan Lakukan ini -->
+<div data-wajik="swipe-right" class="box"></div>
+
+<!-- Lakukan ini -->
+<div class="wrapper" data-wajik="swipe-right">
+  <div class="box"></div>
+</div>
 ```

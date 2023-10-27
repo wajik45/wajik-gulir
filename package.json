@@ -1,6 +1,6 @@
 {
   "name": "wajik-gulir",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Library sederhana animasi ketika di scroll",
   "files": [
     "dist",

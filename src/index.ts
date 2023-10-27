@@ -25,6 +25,8 @@ const wajikGulir: IWajikGulir = {
               if (children.length > 0) {
                 for (const child of children) {
                   if (isAsync(child) && isWajik(child)) {
+                    child.style.transition = "0ms";
+
                     setAnimation(child, "hide");
                   }
                 }
@@ -96,7 +98,11 @@ const wajikGulir: IWajikGulir = {
         init() {
           waitForElement("[data-wajik]", (elements) => {
             for (const element of elements) {
-              if (!isAsync(element)) setAnimation(element, "hide");
+              if (!isAsync(element)) {
+                element.style.transition = "0ms";
+
+                setAnimation(element, "hide");
+              }
             }
           });
         },
